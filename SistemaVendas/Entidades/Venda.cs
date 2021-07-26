@@ -19,6 +19,6 @@ namespace SistemaVendas.Entidades
 
         public Cliente Cliente { get; set; }
 
-        public ICollection<VendaProdutos> Produtos { get; set; };
+        public ICollection<VendaProdutos> Produtos { get; set; }
     }
 }

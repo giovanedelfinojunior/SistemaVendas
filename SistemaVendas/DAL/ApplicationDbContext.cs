@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using SistemaVendas.Entidades;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,8 @@ namespace SistemaVendas.DAL
         public DbSet<Cliente> Cliente { get; set; }
         public DbSet<Venda> Venda { get; set; }
         public DbSet<VendaProdutos> VendaProdutos { get; set; }
+
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
