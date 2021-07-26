@@ -23,13 +23,9 @@ namespace SistemaVendas.Controllers
 
         public IActionResult Index()
         {
-            Categoria categoria = new Categoria() {
-                Descricao = "Teste"
-            };  
-            Repositorio.Categoria.Add(categoria);
-            Repositorio.SaveChanges();
+            IEnumerable<Categoria> lista = Repositorio.Categoria.ToList();
 
-            return View();
+            return View(lista);
         }
 
         public IActionResult Privacy()
