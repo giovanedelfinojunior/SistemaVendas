@@ -23,9 +23,12 @@ namespace SistemaVendas.Controllers
 
         public IActionResult Index()
         {
-            IEnumerable<Categoria> lista = Repositorio.Categoria.ToList();
+            Categoria objCategoria = Repositorio.Categoria.Where(x => x.Codigo == 2).FirstOrDefault();
+            Repositorio.Attach(objCategoria);
+            Repositorio.Remove(objCategoria);
+            Repositorio.SaveChanges();
 
-            return View(lista);
+            return View();
         }
 
         public IActionResult Privacy()
