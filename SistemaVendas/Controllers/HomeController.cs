@@ -23,10 +23,6 @@ namespace SistemaVendas.Controllers
 
         public IActionResult Index()
         {
-            Categoria objCategoria = Repositorio.Categoria.Where(x => x.Codigo == 2).FirstOrDefault();
-            Repositorio.Attach(objCategoria);
-            Repositorio.Remove(objCategoria);
-            Repositorio.SaveChanges();
 
             return View();
         }
