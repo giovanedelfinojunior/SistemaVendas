@@ -1,16 +1,19 @@
-﻿<div class="row" style="text-align:center;">
+﻿@{
+ ViewData[ "Title" ] = "Menu";
+}
+<div class="row" style="text-align:center;">
     <div class="col-md-4">
         <div>
             <a href="../Cliente/Index">
-                <img src="~/img/clientes.png"  width="150" height="150"/>
+                <img src="~/img/clientes.png" width="150" height="150" />
             </a>
         </div>
         <span>Cadastro de Clientes</span>
     </div>
     <div class="col-md-4">
         <div>
-            <a href="../Views/Categoria/Index.cshtml">
-                <img src="~/img/categorias.png"  width="150" height="150"/>
+            <a href="../Categoria/Index">
+                <img src="~/img/categorias.png" width="150" height="150" />
             </a>
         </div>
         <span>Cadastro de Categoria</span>
@@ -18,18 +21,19 @@
     <div class="col-md-4">
         <div>
             <a href="../Produto/Index">
-                <img src="~/img/produtos.png" width="150" height="150"/>
+                <img src="~/img/produtos.png" width="150" height="150" />
             </a>
         </div>
         <span>Cadastro de Produtos</span>
     </div>
 </div>
-<br /><br />
+<br />
+<br />
 <div class="row" style="text-align:center;">
     <div class="col-md-4">
         <div>
             <a href="../Venda/Index">
-                <img src="~/img/vendas.png"  width="150" height="150"/>
+                <img src="~/img/vendas.png" width="150" height="150" />
             </a>
         </div>
         <span>Registro de Vendas</span>
@@ -37,7 +41,7 @@
     <div class="col-md-4">
         <div>
             <a href="../Relatorio/Grafico">
-                <img src="~/img/relatorios.png"  width="150" height="150"/>
+                <img src="~/img/relatorios.png" width="150" height="150" />
             </a>
         </div>
         <span>Relatórios</span>
@@ -45,7 +49,7 @@
     <div class="col-md-4">
         <div>
             <a href="../Configuracao/Index">
-                <img src="~/img/configuracoes.png"  width="150" height="150"/>
+                <img src="~/img/configuracoes.png" width="150" height="150" />
             </a>
         </div>
         <span>Configurações</span>
