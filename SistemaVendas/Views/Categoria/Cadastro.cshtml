@@ -3,9 +3,12 @@
 
 @model SistemaVendas.Models.CategoriaViewModel
 
+@{
+    var disabled = (Model.Codigo == null) ? "disabled" : string.Empty;
+}
 <form asp-controller="Categoria" asp-action="Cadastro" method="post">
 
-    <input type="hidden" asp-for="Codigo"  value="@Model.Codigo"/>
+    <input type="hidden" asp-for="Codigo" value="@Model.Codigo" />
 
     <div class="form-group">
         <div class="col-4">
@@ -18,21 +21,21 @@
             <button type="button" class="btn btn-info" onclick="Novo()">Novo</button>
             <button type="submit" class="btn btn-success">Gravar</button>
             <button type="button" class="btn btn-warning" onclick="Listagem()">Listagem</button>
-            <button type="button" class="btn btn-danger" onclick="Excluir(@Model.Codigo)">Excluir</button>
+            <button type="button" class="btn btn-danger" onclick="Excluir(@Model.Codigo)" @disabled>Excluir</button>
         </div>
     </div>
 </form>
 <script>
-    function Novo(){
+    function Novo() {
         Request("Cadastro");
     }
-    function Listagem(){
+    function Listagem() {
         Request("");
     }
-    function Excluir(Codigo){
+    function Excluir(Codigo) {
         Request("Excluir\\" + Codigo);
     }
-    function Request(request){
+    function Request(request) {
         window.location = window.origin + "\\Categoria\\" + request;
     }
 </script>

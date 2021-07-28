@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\CategoriaViewModel - Cópia.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Helpers\" />
     <Folder Include="wwwroot\img\" />
   </ItemGroup>
