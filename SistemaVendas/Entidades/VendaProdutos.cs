@@ -9,6 +9,7 @@ namespace SistemaVendas.Entidades
 {
     public class VendaProdutos
     {
+        [Key]
         public int CodigoVenda { get; set; }
         public int CodigoProduto { get; set; }
         public double Quantidade { get; set; }

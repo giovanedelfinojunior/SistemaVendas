@@ -15,7 +15,7 @@ namespace SistemaVendas.Entidades
         public decimal Total { get; set; }
 
         [ForeignKey("Cliente")]
-        public int CodigoCliente { get; set; }
+        public int? CodigoCliente { get; set; }
 
         public Cliente Cliente { get; set; }
 
