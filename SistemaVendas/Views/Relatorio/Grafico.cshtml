@@ -1,1 +1,40 @@
-﻿
+﻿@{
+    ViewData[ "Title" ] = "Total de Vendas por Produto";
+}
+<h2>@ViewData[ "Title" ]</h2>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<br />
+<div class="chart-container">
+    <canvas id="myChart"></canvas>
+</div>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: [@Html.Raw(ViewBag.Labels)],
+            datasets: [{
+                data: [@Html.Raw(ViewBag.Valores)],
+                backgroundColor: [@Html.Raw(ViewBag.Cores)],
+                borderColor: ['#fff'],
+                borderWidth: 1
+
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+</script>
+
+<style>
+    .chart-container {
+        width: 500px;
+        height: 500px;
+        align-content: center;
+        align-items: center;
+        margin: auto;
+    }
+</style>
